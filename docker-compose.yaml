@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:13.4-alpine
+    container_name: practice-orm-postgresql
+    environment:
+      - POSTGRES_PASSWORD=testpassword
+      - POSTGRES_USER=testuser
+      - POSTGRES_DB=testuser
+    ports:
+      - 5234:5432
+    restart: always
